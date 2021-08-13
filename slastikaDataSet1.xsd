@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="slastikaDataSet1" targetNamespace="http://tempuri.org/slastikaDataSet1.xsd" xmlns:mstns="http://tempuri.org/slastikaDataSet1.xsd" xmlns="http://tempuri.org/slastikaDataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="slastikaConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="slastikaConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.PrijavaKorisnika.Properties.Settings.GlobalReference.Default.slastikaConnectionString1" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="aktivne_narudzbeTableAdapter" GeneratorDataComponentClassName="aktivne_narudzbeTableAdapter" Name="aktivne_narudzbe" UserDataComponentName="aktivne_narudzbeTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="slastikaConnectionString1 (Settings)" DbObjectName="slastika.aktivne_narudzbe" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `broj_stola`, `ime`, `cijena`, `kolicina` FROM `slastika`.`aktivne_narudzbe`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="broj_stola" DataSetColumn="broj_stola" />
+              <Mapping SourceColumn="ime" DataSetColumn="ime" />
+              <Mapping SourceColumn="cijena" DataSetColumn="cijena" />
+              <Mapping SourceColumn="kolicina" DataSetColumn="kolicina" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="slastikaDataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="slastikaDataSet1" msprop:Generator_UserDSName="slastikaDataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="aktivne_narudzbe" msprop:Generator_TableClassName="aktivne_narudzbeDataTable" msprop:Generator_TableVarName="tableaktivne_narudzbe" msprop:Generator_TablePropName="aktivne_narudzbe" msprop:Generator_RowDeletingName="aktivne_narudzbeRowDeleting" msprop:Generator_RowChangingName="aktivne_narudzbeRowChanging" msprop:Generator_RowEvHandlerName="aktivne_narudzbeRowChangeEventHandler" msprop:Generator_RowDeletedName="aktivne_narudzbeRowDeleted" msprop:Generator_UserTableName="aktivne_narudzbe" msprop:Generator_RowChangedName="aktivne_narudzbeRowChanged" msprop:Generator_RowEvArgName="aktivne_narudzbeRowChangeEvent" msprop:Generator_RowClassName="aktivne_narudzbeRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="broj_stola" msprop:Generator_ColumnVarNameInTable="columnbroj_stola" msprop:Generator_ColumnPropNameInRow="broj_stola" msprop:Generator_ColumnPropNameInTable="broj_stolaColumn" msprop:Generator_UserColumnName="broj_stola" type="xs:int" />
+              <xs:element name="ime" msprop:Generator_ColumnVarNameInTable="columnime" msprop:Generator_ColumnPropNameInRow="ime" msprop:Generator_ColumnPropNameInTable="imeColumn" msprop:Generator_UserColumnName="ime" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cijena" msprop:Generator_ColumnVarNameInTable="columncijena" msprop:Generator_ColumnPropNameInRow="cijena" msprop:Generator_ColumnPropNameInTable="cijenaColumn" msprop:Generator_UserColumnName="cijena" type="xs:decimal" minOccurs="0" />
+              <xs:element name="kolicina" msprop:Generator_ColumnVarNameInTable="columnkolicina" msprop:Generator_ColumnPropNameInRow="kolicina" msprop:Generator_ColumnPropNameInTable="kolicinaColumn" msprop:Generator_UserColumnName="kolicina" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
